@@ -375,7 +375,7 @@ int _cb_poll()
         }
     }
     call_timeout_callback();
-    return 0;
+    return 1;
 }
 
 int cb_poll()

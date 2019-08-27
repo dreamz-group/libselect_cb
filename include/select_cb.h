@@ -35,6 +35,7 @@ typedef int (*cb_func_p)(int fd, void *user_data);
 typedef int (*cb_to_func_p)(time_t epoc_wake_uptime, void *user_data);
 
 /// Poll the for data.
+/// @return negative number on error, 0 on timeout and 1 if select was triggerd.
 int cb_poll(); 
 
 /// This will start a loop waiting for data to arive and trigger the callbacks.
